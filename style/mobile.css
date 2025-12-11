@@ -1,0 +1,234 @@
+@media screen and (max-width: 431px) {
+    nav {
+        flex-wrap: wrap;
+        width: 430px;
+        justify-content: center;
+        padding: 0%;
+    }
+
+    body {
+        scrollbar-width: thin;
+    }
+
+    .catProfile,
+    .header,
+    .staminaBar {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        padding: 0% 5%;
+    }
+
+    .room {
+        margin: 0%;
+        width: 100%;
+        height: 75vh;
+        aspect-ratio: 1 / 1;
+        /* Or whatever square ratio your room image uses */
+        position: relative;
+    }
+
+    .decoration {
+        max-width: 15%;
+        /* Shrink decorations for smaller screens */
+    }
+
+    .plant {
+        top: 305px !important;
+        left: 170px !important;
+        transform: translate(-50%, -50%) scale(0.6);
+        /* slight size adjustment */
+    }
+
+    .bed {
+        top: 315px !important;
+        left: 215px !important;
+        transform: translate(-50%, -50%) scale(0.8);
+        /* slight size adjustment */
+    }
+
+    .window1 {
+        top: 272px !important;
+        left: 145px !important;
+        transform: translate(-50%, -50%) scale(0.8);
+        /* slight size adjustment */
+    }
+
+    .window2 {
+        top: 315px !important;
+        left: 60px !important;
+        transform: translate(-50%, -50%) scale(0.8);
+        /* slight size adjustment */
+    }
+
+    .window3 {
+        top: 300px !important;
+        left: 356px !important;
+        transform: translate(-50%, -50%) scale(0.8);
+        /* slight size adjustment */
+    }
+
+    .playground2 {
+        top: 372px !important;
+        left: 386px !important;
+        transform: translate(-50%, -50%) scale(0.6);
+        /* slight size adjustment */
+    }
+
+    .playground3 {
+        top: 390px !important;
+        left: 60px !important;
+        transform: translate(-50%, -50%) scale(0.6);
+        /* slight size adjustment */
+    }
+
+    .playground1 {
+        top: 336px !important;
+        left: 125px !important;
+        transform: translate(-50%, -50%) scale(1);
+        /* slight size adjustment */
+    }
+
+    .photoGalleryWord {
+        font-size: small;
+    }
+
+    .photoGallery1 {
+        top: 22px !important;
+        left: 56px !important;
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    .photoGallery2 {
+        transform: translate(-50%, -50%) scale(1.75);
+    }
+
+    .photoGallery3 {
+        top: 45px !important;
+        left: 52px !important;
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    .water {
+        transform: translate(-50%, -50%) scale(0.8);
+        /* slight size adjustment */
+    }
+
+    .chat-container {
+        width: 100%;
+        height: 95%;
+        margin: 0;
+        margin-top: 15%;
+    }
+
+    .story-popup {
+        width: 80%;
+    }
+
+    #popup-close-btn {
+        right: 7%;
+        width: 30px;
+        background-size: cover;
+        height: 30px;
+    }
+
+    .photo-details-body,
+    .addPhoto-content {
+        flex-wrap: wrap;
+    }
+
+    .gallery {
+        width: 100%;
+    }
+
+    .gallery-scroll {
+        display: flex;
+        flex-direction: column;
+        gap: 10%;
+        padding-right: 5px;
+    }
+
+    #popup-catProfile {
+        padding: 5% 0;
+        width: 92vw;
+    }
+
+    .profile-header{
+        width: 50%;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 10% auto;
+    }
+
+    .inventory-wrapper{
+        flex-wrap: wrap;
+    }
+
+    .filter-inventory{
+        width: 100%;
+        margin: 0 auto;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 7%;
+    }
+
+    .inventory-container{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 4%;
+    }
+
+    .item{
+        margin-bottom: 5%;
+    }
+
+    .filter-btn:first-child {
+    border-radius: 20px 0 0 20px;
+    }
+    .filter-btn:last-child {
+        border-radius: 0 20px 20px 0;
+    }
+
+    .back-btn-head{
+        width: 18vw;
+    }
+
+    #back-to-packs{
+        width: 30vw;
+    }
+
+    .exercise-item{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .exercise-item .image-container{
+        width: 50%;
+    }
+    .exercise-item .arrow-container img {
+        width: 55px;
+        height: auto;
+    }
+
+    #popup-exercise-video{
+        width: 80%;
+    }
+    #exercise-detail-popup{
+        width: 80vw;
+    }
+    .pause-buttons{
+        flex-wrap: wrap;
+    }
+
+    #pause-popup, .pause-popup{
+        width: 80vw;
+    }
+
+    .cat-area{
+        width: 80% !important;
+        height: 50vh !important;
+        margin: 55% auto !important;
+    }
+
+
+}

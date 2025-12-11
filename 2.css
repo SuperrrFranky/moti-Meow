@@ -1,0 +1,321 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, #ffffff, #ffffff 80%, #fbfaed);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+    font-family: "Lohit Bengali";
+    scrollbar-width: none;
+    ;
+}
+
+nav {
+    border-radius: 0 0 64px 64px;
+    background: #F1E7DF;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5% 2%;
+
+}
+
+.catProfile,
+.header,
+.staminaBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.header {
+    padding: 0;
+    align-items: flex-start;
+}
+
+.staminaBar {
+    padding: 0;
+    align-items: flex-end;
+}
+
+.catProfileIcon {
+    width: 125px;
+    height: 125px;
+    flex-shrink: 0;
+    background-color: #BFC8F4;
+    border-radius: 100%;
+}
+
+.catProfile H2 {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.mainContainer {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    aspect-ratio: 3 / 2;
+    /* or whatever your image ratio is */
+}
+
+.room {
+    position: relative;
+    margin: 0 10%;
+    width: 80%;
+    height: 100%;
+    background: url('/res/image/Room1.png') no-repeat center center;
+    background-size: contain;
+    overflow: hidden;
+}
+
+.decoration {
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.photoSet img {
+    position: absolute;
+}
+
+.photoGallery1 {
+    width: 70px;
+    left: 75px;
+    bottom: 30px;
+}
+
+.photoGallery2 {
+    width: 115px;
+    left: -30px;
+    bottom: 10px;
+}
+
+.photoGallery3 {
+    width: 30px;
+    left: 85px;
+    bottom: -17px;
+}
+
+.photoGallery {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    font-size: 14px;
+    color: purple;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.cat {
+    width: 72px;
+    height: 72px;
+    background: url('/res/image/cat/Excited.png') no-repeat;
+    background-size: cover;
+    z-index: 10;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    animation: walk-cycle 10s steps(10) infinite forwards;
+
+}
+
+#cat-walkable-area {
+    position: absolute;
+    background-color: rgba(0, 255, 0);
+    /* light green with transparency */
+    border: 2px dashed green;
+    pointer-events: none;
+    /* let clicks pass through */
+    z-index: 5;
+}
+
+@keyframes walk-cycle {
+    from {
+        background-position: -720px;
+    }
+
+    to {
+        background-position: 0px;
+    }
+}
+
+.interactionContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    top: -70%;
+    left: -60%;
+    position: absolute;
+    width: 175px;
+    border-radius: 100%;
+    height: 100px;
+    display: none;
+}
+
+.interaction {
+    width: 45px !important;
+    height: auto;
+    border-radius: 100%;
+    background-color: antiquewhite;
+    position: absolute;
+}
+
+.feed {
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+}
+
+.chat {
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.click {
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.err {
+    color: red;
+}
+
+/*Pop Up Window */
+#popup-window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F1E7DF;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    width: 80vw;
+    height: 80vh;
+    display: none;
+}
+
+#popup-close-btn {
+    background: url('/res/image/popup_close_button.png') no-repeat;
+    width: 10%;
+    height: 10%;
+    display: block;
+    position: absolute;
+    right: -5%;
+    cursor: pointer;
+}
+
+/* Claim Button */
+#claimRewardBtn {
+    margin-top: 10px;
+    background: #00e093;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Message after Claim */
+#claimMessage {
+    margin-top: 10px;
+    color: green;
+    font-size: 14px;
+}
+
+#dailyRewardPopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #e1c8b3;
+    padding: 30px;
+    border-radius: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 2000;
+}
+
+#dailyRewardPopup h1 {
+    margin-bottom: 20px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+#dailyRewardPopup img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+#dailyRewardPopup button {
+    background-color: #8fffae;
+    color: #000;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#dailyRewardPopup button:hover {
+    background-color: #7beaa3;
+}
+
+#checkedInPopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    background-color: #e1c8b3;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+    z-index: 9999;
+    /* make sure it is always on top */
+}
+
+#closeCheckedIn {
+    background-color: #90f7b1;
+    color: black;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+#checkedInPopup .warning-icon {
+    font-size: 3rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+#alreadyCheckedInPopup h2 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+#closeAlreadyCheckedIn {
+    background: #00e093;
+    border: none;
+    padding: 8px 20px;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}

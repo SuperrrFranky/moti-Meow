@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat Test</title>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+  <input type="text" id="chat-input" />
+  <button id="chat-send-btn">Send</button>
+  <div id="chat-result"></div>
+
+  <script>
+    const CHAT_API_URL = `${window.location.origin}/back_end/presentation_layer/InteractionController/interactionController.php`;
+
+    $(document).on("click", "#chat-send-btn", function () {
+      const msg = $("#chat-input").val().trim();
+      $.post(CHAT_API_URL, {
+        action: "getResponse",
+        message: msg
+      }, function (data) {
+        $("#chat-result").text("Response: " + data.response);
+      }, "json").fail(function (xhr) {
+        console.error("Error:", xhr.status, xhr.responseText);
+      });
+    });
+  </script>
+</body>
+</html>
